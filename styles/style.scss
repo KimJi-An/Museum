@@ -1,2 +1,103 @@
 @charset "UTF-8";
 @import "./reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@800&family=Rethink+Sans&family=Teko:wght@500&display=swap');
+
+$bgColor: #F0F0F0;
+$fontColor: #000000;
+$labelColor: #FF8101;
+$bannerColor: #C7C2CA;
+$imgBgColor: #C8CAC7;
+$titleFont: 'Archivo';
+$mainFont: 'Teko';
+$bodyFont: 'Rethink Sans';
+$gap: 2px;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.wrapper {
+		width: 95%;
+		height: 90vh;
+		display: grid;
+		grid-template-columns: 0.3fr repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr) 4.5fr 3.5fr;
+		gap: $gap;
+		font-family: $bodyFont, sans-serif;
+		background-color: $fontColor;
+		border-radius: 5px;
+		border: 5px solid $fontColor;
+
+		article, div, h2, h3 {
+			background-color: $bgColor;
+		}
+
+		.logo {
+			grid-column: 1 / span 2;
+			grid-row: 1 / span 2;
+			position: relative;
+
+			img {
+				height: 70%;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		.title {
+			grid-column: 3 / span 3;
+			display: flex;
+			align-items: center;
+			text-transform: uppercase;
+			font-family: $titleFont, sans-serif;
+			font-size: 40px;
+			word-spacing: 10px;
+			padding-left: 20px;
+		}
+
+		.nav {
+			display: flex;
+			flex-direction: column;
+			padding: 20px;
+
+			.nav__title {
+				font-family: $mainFont, sans-serif;
+				font-size: 25px;
+				word-spacing: 5px;
+			}
+
+			.nav__contents {
+				font-size: 12px;
+				font-weight: bold;
+			}
+		}
+
+		.label {
+			grid-row: 3 / span 2;
+		}
+
+		.article {
+
+		}
+
+		.img {
+
+		}
+
+		.banner {
+
+		}
+
+		.here {
+			grid-column: 2 / span 3;
+		}
+	}
+}
