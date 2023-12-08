@@ -50,6 +50,23 @@ body {
 				top: 50%;
 				transform: translate(-50%, -50%);
 			}
+
+			span {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 40px;
+				height: 40px;
+				position: absolute;
+				transform-origin: right bottom;
+				transform: rotate(15deg);
+				right: -5%;
+				bottom: -15%;
+				z-index: 1000;
+				font-size: 12px;
+				background-color: $labelColor;
+				border-radius: 100%;
+			}
 		}
 
 		.title {
@@ -112,7 +129,6 @@ body {
 			}
 
 			.article__content {
-				align-items: center;
 				font-size: 13px;
 				line-height: 1.5;
 			}
@@ -157,7 +173,24 @@ body {
 		}
 
 		.here {
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 10px;
 			grid-column: 2 / span 3;
+
+			h4 {
+				align-self: center;
+				font-family: $titleFont;
+				text-transform: uppercase;
+				font-size: 150px;
+			}
+
+			p {
+				font-size: 13px;
+				line-height: 1.5;
+			}
 		}
 	}
 }
