@@ -86,14 +86,14 @@ body {
 			background-color: $fontColor;
 			position: relative;
 
-			span {
-				display: inline-block;
+			h4 {
 				font-family: $mainFont, sans-serif;
 				font-size: 25px;
 				white-space: nowrap;
 				position: absolute;
-				left: -277%;
-				top: 48%;
+				left: 65%;
+				top: 0;
+				transform-origin: left top;
 				transform: rotate(90deg);
 				word-spacing: 5px;
 			}
