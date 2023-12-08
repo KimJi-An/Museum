@@ -27,7 +27,7 @@ body {
 		height: 90vh;
 		display: grid;
 		grid-template-columns: 0.3fr repeat(4, 1fr);
-		grid-template-rows: repeat(2, 1fr) 4.5fr 3.5fr;
+		grid-template-rows: repeat(2, 1fr) 3.5fr 3fr;
 		gap: $gap;
 		font-family: $bodyFont, sans-serif;
 		background-color: $fontColor;
@@ -100,15 +100,60 @@ body {
 		}
 
 		.article {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 15px;
+			padding: 20px;
 
+			.article__title {
+				font-family: $mainFont, sans-serif;
+				font-size: 30px;
+			}
+
+			.article__content {
+				align-items: center;
+				font-size: 13px;
+				line-height: 1.5;
+			}
 		}
 
 		.img {
+			position: relative;
+			background-color: $imgBgColor;
 
+			img {
+				height: 100%;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
 		}
 
 		.banner {
+			padding: 15px;
+			background-color: $bannerColor;
 
+			div {
+				height: 100%;
+				padding: 40px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: 40px;
+				border: $gap solid $fontColor;
+
+				h4 {
+					font-family: $mainFont, sans-serif;
+					font-size: 30px;
+				}
+
+				span {
+					font-size: 15px;
+					text-decoration: underline;
+				}
+			}
 		}
 
 		.here {
