@@ -82,6 +82,21 @@ body {
 
 		.label {
 			grid-row: 3 / span 2;
+			color: $bgColor;
+			background-color: $fontColor;
+			position: relative;
+
+			span {
+				display: inline-block;
+				font-family: $mainFont, sans-serif;
+				font-size: 25px;
+				white-space: nowrap;
+				position: absolute;
+				left: -277%;
+				top: 48%;
+				transform: rotate(90deg);
+				word-spacing: 5px;
+			}
 		}
 
 		.article {
