@@ -12,6 +12,16 @@ $mainFont: 'Teko';
 $bodyFont: 'Rethink Sans';
 $gap: 2px;
 
+@keyframes slide {
+	0% {
+		transform: translateY(-3000%) rotate(90deg);
+	}
+
+	100% {
+		transform: translateY(0%) rotate(90deg);
+	}
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -98,21 +108,22 @@ body {
 		}
 
 		.label {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			grid-row: 3 / span 2;
 			color: $bgColor;
 			background-color: $fontColor;
+			overflow: hidden;
 			position: relative;
 
-			h4 {
+			span {
 				font-family: $mainFont, sans-serif;
 				font-size: 25px;
-				white-space: nowrap;
+				width: max-content;
 				position: absolute;
-				left: 65%;
-				top: 0;
-				transform-origin: left top;
-				transform: rotate(90deg);
 				word-spacing: 5px;
+				animation: slide 10s linear infinite;
 			}
 		}
 
